@@ -16,6 +16,7 @@ a {
     padding: 10px;
     margin: 10px;
     background-color: lightgreen;
+    display: block;
 }
 a:hover {
     color: white;
