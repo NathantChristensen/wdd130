@@ -41,6 +41,7 @@ img {
   display: block;
   margin: 0 auto;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
@@ -67,6 +68,13 @@ p {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color);
   padding: 1em;
+}
+.icon {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 20%;
+  border: solid 3px black;
 }
 .colors {
   width: 100%;
