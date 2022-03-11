@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="icon" src="images/icon.jpg" alt="icon image">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="expectations.html">Pool Expectations</a>
+                <a href="schedule.html">Scheduling/Cost</a>
+                <a href="contact.html" class="currentpage">Contact Information</a>
+            </nav>
+        </div>
+    </header>
+    <section class="herobox2">
+        <img class="heroimg" src="images/homeimg2.jpg" alt="Forest and Lake in Colorado"> 
+        <h1>Contact Information</h1>
+    </section>
+    <main class="homegrid4">
+        <h1 class="20"></h1>
+        <p class="21"></p>
+        <h1 class="22"></h1>
+        <p class="23"></p>
+        <img class="24" src="images/contact1.png" alt="phone icon">
+        <h1 class="25"></h1>
+        <p class="26"></p>
+        <h1 class="27"></h1>
+        <p class="28"></p>
+        <img class="29" src="images/contact2.png" alt="email icon">
+
+        <div id="feedback"></div>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="user_name">
+                </li>
+                <li>
+                  <label for="mail">E-mail:</label>
+                  <input type="email" id="mail" name="user_email">
+                </li>
+                <li>
+                  <label for="msg">Message:</label>
+                  <textarea id="msg" name="user_message"></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit">Send your message</button>
+                </li>
+            </ul>
+        </form>
+    </main>
+    <footer>
+        <img src="images/fbicon.png" alt="Facebook Icon">
+        <h4>Follow us on Facebook</h4>
+        <a href="swim-site-plan.html">Find our site plan here.</a>
+    </footer>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>  
+</body>
+</html>
